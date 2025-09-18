@@ -73,11 +73,8 @@ const Hero: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                     >
-                        <a href="#experience" className="btn btn-primary" onClick={handleScrollClick}>
-                            <i className="fa-solid fa-briefcase"></i> My Experience
-                        </a>
-                        <a href="#contact" className="btn btn-secondary" onClick={handleScrollClick}>
-                            <i className="fa-solid fa-address-book"></i> Contact Info
+                        <a href="#about" className="btn btn-primary" onClick={handleScrollClick}>
+                            <i className="fa-solid fa-user"></i> About Me
                         </a>
                     </motion.div>
                 </div>
