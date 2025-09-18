@@ -469,6 +469,7 @@ const Projects: React.FC = () => {
                              {projectsData.map((item, index) => (
                                 <button
                                     key={index}
+                                    data-project-index={index}
                                     className={`relative w-full text-left p-4 pr-8 transition-colors duration-300 ${selectedTab === index ? 'text-[#00d9ff]' : 'text-[#64748b] hover:bg-white/5 hover:text-[#e0e6ed]'}`}
                                     onClick={() => handleTabChange(index)}
                                 >

@@ -3,7 +3,6 @@ import { LazyMotion, domAnimation } from 'framer-motion';
 import GlobalBackground from './components/GlobalBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -40,7 +39,6 @@ const App: React.FC = () => {
                     <Navbar />
                     <main>
                         <Hero />
-                        <SectionWrapper id="about"><About /></SectionWrapper>
                         <SectionWrapper id="projects"><Projects /></SectionWrapper>
                         <SectionWrapper id="skills"><Skills /></SectionWrapper>
                         <SectionWrapper id="experience"><Experience /></SectionWrapper>

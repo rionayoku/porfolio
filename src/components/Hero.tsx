@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { WordRotate } from './WordRotate';
+import AboutMeContent from './AboutMeContent';
 
 const ICONS_ROW1 = [
     `${import.meta.env.BASE_URL}src/images/tech-icons/Mikrotik.svg`,
@@ -67,16 +68,7 @@ const Hero: React.FC = () => {
                             className="font-['Poppins'] font-bold uppercase tracking-wider text-lg md:text-xl lg:text-2xl text-gradient"
                         />
                     </motion.div>
-                    <motion.div
-                        className="flex gap-3 flex-wrap justify-center mb-4"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-                    >
-                        <a href="#about" className="btn btn-primary" onClick={handleScrollClick}>
-                            <i className="fa-solid fa-user"></i> About Me
-                        </a>
-                    </motion.div>
+                    <AboutMeContent />
                 </div>
 
                 <motion.div
