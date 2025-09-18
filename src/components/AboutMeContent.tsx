@@ -21,10 +21,10 @@ const AboutMeContent: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         >
             <div className="max-w-4xl mx-auto">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-4 md:p-6 lg:p-8 backdrop-blur-sm max-h-[60vh] md:max-h-none overflow-y-auto md:overflow-visible">
-                    <h3 className="font-['Poppins'] text-lg md:text-xl lg:text-2xl text-slate-300 mb-4 md:mb-6 font-bold tracking-[1px] uppercase text-center sticky top-0 bg-white/5 backdrop-blur-sm pb-2 md:pb-0 md:relative md:bg-transparent">
-                        About Me
-                    </h3>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-4 md:p-6 lg:p-8 backdrop-blur-sm max-h-[60vh] md:max-h-none overflow-y-auto md:overflow-visible">
+                                <h3 className="font-['Poppins'] text-lg md:text-xl lg:text-2xl text-slate-300 mb-4 md:mb-6 font-bold tracking-[1px] uppercase text-center">
+                                    About Me
+                                </h3>
                     <div className="text-[#e0e6ed] text-sm md:text-base lg:text-lg leading-relaxed">
                         <p className="text-left md:text-justify">
                             Hi, I'm Mario Harold Yoku—a passionate IT Network & Systems Engineer from Jayapura, Papua. My career has taken me on an exciting journey across Indonesian data center, islands, and even big events! From building robust network monitoring solutions with{' '}
