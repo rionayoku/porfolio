@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
 
     return {
         // Base URL for assets. Set VITE_BASE to "/repo-name/" for GitHub Pages.
-        base: env.VITE_BASE || '/',
+        base: '/portfolio/',
         plugins: [
             react(),
             {
