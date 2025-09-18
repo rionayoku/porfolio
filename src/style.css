@@ -50,11 +50,7 @@ html {
 .btn-secondary:hover { border-color: #ff006e; color: #e0e6ed; }
 .btn-secondary:hover::before { opacity: 0.8; }
 
-/* FloatingContact.tsx */
-.fab-option { width: 60px; height: 60px; border-radius: 50%; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); color: #e0e6ed; text-decoration: none; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; transition: all 0.3s ease; position: relative; overflow: hidden; }
-.fab-option:hover { transform: scale(1.1); }
-.fab-tooltip { position: absolute; right: 75px; top: 50%; transform: translateY(-50%); background: #0a0e1a; color: #e0e6ed; padding: 10px 20px; border-radius: 10px; font-size: 1rem; white-space: nowrap; opacity: 0; visibility: hidden; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
-.fab-option:hover .fab-tooltip { opacity: 1; visibility: visible; }
+
 
 /* Projects.tsx - Image Slider */
 .project-slider-container {
@@ -123,7 +119,7 @@ html {
   will-change: left, top, opacity;
   transition: left 70ms linear, top 70ms linear, opacity 300ms ease-out;
 }
-@keyframes word-appear { 0% { opacity: 0; transform: translateY(30px) scale(0.8); filter: blur(10px); } 50% { opacity: 0.8; transform: translateY(10px) scale(0.95); filter: blur(2px); } 100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
+
 @keyframes grid-draw { 0% { stroke-dashoffset: 1000; opacity: 0; } 50% { opacity: 0.3; } 100% { stroke-dashoffset: 0; opacity: 0.15; } }
 @keyframes pulse-glow { 0%, 100% { opacity: 0.1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.1); } }
 .word-animate { display: inline-block; opacity: 0; margin: 0 0.1em; transition: color 0.3s ease, transform 0.3s ease; }

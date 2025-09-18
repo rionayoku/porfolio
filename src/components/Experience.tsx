@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface ExperienceItem {
@@ -37,9 +37,9 @@ const experienceData: ExperienceItem[] = [
         shortLabel: 'IBM', 
         date: '2017 – 2020', 
         title: 'IT Support Engineer – Banking Devices', 
-        company: 'PT Jasa Teknologi Informasi IBM', 
+        company: 'PT Jasa Teknologi Informasi IBMu', 
         description: [
-            'Managed the full lifecycle of over 200 CRM/CDM banking machines (Hitachi, Wincor, Hyosung) for top-tier financial clients like Bank BCA and BNI.', 
+            'Managed the full lifecycle of CRM/CDM banking machines (Hitachi, Wincor, Hyosung) for top-tier financial clients like Bank BCA and BNI.', 
             'Maintained a 99.5% operational uptime rate across a wide geographical territory by performing expert installation, preventive maintenance, and rapid troubleshooting.', 
             'Served as the primary technical point of contact for bank IT teams, ensuring swift issue resolution and maintaining high levels of client satisfaction.', 
             'Provided field support across 6 key remote locations, demonstrating reliability and technical autonomy.'
@@ -60,13 +60,36 @@ const experienceData: ExperienceItem[] = [
 
 const Experience: React.FC = () => {
     const [selectedTab, setSelectedTab] = useState(0);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    const handleTabChange = (index: number) => {
+        setSelectedTab(index);
+
+        // Scroll the selected card into view in the horizontal list
+        if (scrollContainerRef.current) {
+            const selectedCard = scrollContainerRef.current.children[index] as HTMLElement;
+            if (selectedCard) {
+                const container = scrollContainerRef.current;
+                const containerWidth = container.clientWidth;
+                const cardWidth = selectedCard.offsetWidth;
+                const cardLeft = selectedCard.offsetLeft;
+
+                // Calculate the position to center the card in the container
+                const targetScrollLeft = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+
+                container.scrollTo({
+                    left: Math.max(0, targetScrollLeft),
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
 
     return (
         <section className="py-16 lg:py-20 relative">
             <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-[30px]">
                 <div className="text-center mb-12">
-                    <h2 className="section-title">Professional Experience</h2>
-                    <p className="text-[#64748b] text-lg md:text-xl font-light tracking-[1px]">Proven track record of engineering and maintaining robust IT infrastructure</p>
+                    <h2 className="section-title">Professional Experience</h2>                   
                 </div>
 
                 {/* Mobile Experience Navigation */}
@@ -86,7 +109,11 @@ const Experience: React.FC = () => {
 
                     {/* Horizontal Scrollable Experience Cards */}
                     <div className="relative">
-                        <div className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar" style={{ scrollSnapType: 'x mandatory' }}>
+                        <div
+                            ref={scrollContainerRef}
+                            className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar"
+                            style={{ scrollSnapType: 'x mandatory' }}
+                        >
                             {experienceData.map((experience, index) => (
                                 <div
                                     key={index}
@@ -95,7 +122,7 @@ const Experience: React.FC = () => {
                                             ? 'border-[#00d9ff] bg-gradient-to-br from-[#00d9ff]/10 to-[#8b5cf6]/10 shadow-lg shadow-[#00d9ff]/20'
                                             : 'border-white/20 bg-white/5 hover:border-white/40 hover:bg-white/10'
                                     }`}
-                                    onClick={() => setSelectedTab(index)}
+                                    onClick={() => handleTabChange(index)}
                                     style={{ scrollSnapAlign: 'start' }}
                                 >
                                     <div className="p-4">
@@ -123,7 +150,7 @@ const Experience: React.FC = () => {
                         
                         {/* Navigation Arrows */}
                         <button
-                            onClick={() => setSelectedTab(Math.max(0, selectedTab - 1))}
+                            onClick={() => handleTabChange(Math.max(0, selectedTab - 1))}
                             disabled={selectedTab === 0}
                             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-8 h-8 bg-[#0a0f1c] border border-white/20 rounded-full flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/10 transition-all duration-200"
                         >
@@ -131,9 +158,9 @@ const Experience: React.FC = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                             </svg>
                         </button>
-                        
+
                         <button
-                            onClick={() => setSelectedTab(Math.min(experienceData.length - 1, selectedTab + 1))}
+                            onClick={() => handleTabChange(Math.min(experienceData.length - 1, selectedTab + 1))}
                             disabled={selectedTab === experienceData.length - 1}
                             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-8 h-8 bg-[#0a0f1c] border border-white/20 rounded-full flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/10 transition-all duration-200"
                         >
@@ -148,10 +175,10 @@ const Experience: React.FC = () => {
                         {experienceData.map((_, index) => (
                             <button
                                 key={index}
-                                onClick={() => setSelectedTab(index)}
+                                onClick={() => handleTabChange(index)}
                                 className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                                    selectedTab === index 
-                                        ? 'bg-[#00d9ff] w-6' 
+                                    selectedTab === index
+                                        ? 'bg-[#00d9ff] w-6'
                                         : 'bg-white/30 hover:bg-white/50'
                                 }`}
                             />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { LazyMotion, domAnimation } from 'framer-motion';
 import GlobalBackground from './components/GlobalBackground';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -7,7 +8,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import FloatingContact from './components/FloatingContact';
+import MobileNav from './components/MobileNav';
 import SectionWrapper from './components/SectionWrapper';
 
 const Loader: React.FC = () => (
@@ -31,21 +32,23 @@ const App: React.FC = () => {
     }
 
     return (
-        <div className="relative z-0">
-            <GlobalBackground />
-            <div className="relative z-10">
-                <Navbar />
-                <main>
-                    <Hero />
-                    <SectionWrapper id="projects"><Projects /></SectionWrapper>
-                    <SectionWrapper id="skills"><Skills /></SectionWrapper>
-                    <SectionWrapper id="experience"><Experience /></SectionWrapper>
-                    <SectionWrapper id="education"><Education /></SectionWrapper>
-                    <SectionWrapper id="contact"><Contact /></SectionWrapper>
-                </main>
-                <FloatingContact />
+        <LazyMotion features={domAnimation}>
+            <div className="relative z-0">
+                <GlobalBackground />
+                <div className="relative z-10">
+                    <Navbar />
+                    <main>
+                        <Hero />
+                        <SectionWrapper id="projects"><Projects /></SectionWrapper>
+                        <SectionWrapper id="skills"><Skills /></SectionWrapper>
+                        <SectionWrapper id="experience"><Experience /></SectionWrapper>
+                        <SectionWrapper id="education"><Education /></SectionWrapper>
+                        <SectionWrapper id="contact"><Contact /></SectionWrapper>
+                    </main>
+                    <MobileNav />
+                </div>
             </div>
-        </div>
+        </LazyMotion>
     );
 };
 

@@ -27,10 +27,10 @@ const projectsData: Project[] = [
             'Achieved 99.9% uptime visibility with proactive monitoring and detailed analytics'
         ],
         images: [
-            '/src/images/TTC/zabbix-dashboard.png',
-            '/src/images/TTC/Cacti.png',
-            '/src/images/TTC/network-topology.png',
-            '/src/images/TTC/cacti1.png'
+            `${import.meta.env.BASE_URL}src/images/TTC/zabbix-dashboard.png`,
+            `${import.meta.env.BASE_URL}src/images/TTC/Cacti.png`,
+            `${import.meta.env.BASE_URL}src/images/TTC/network-topology.png`,
+            `${import.meta.env.BASE_URL}src/images/TTC/cacti1.png`
         ]
     },
     {
@@ -45,19 +45,35 @@ const projectsData: Project[] = [
             'Configured and managed MikroTik RouterOS devices in production networks.',          
         ],
         images: [
-            '/src/images/Mamberamo/jyp-sarmi-mamberamo.mp4',
-            '/src/images/Mamberamo/mi.jpeg',
-            '/src/images/Mamberamo/Sarmi-Burmeso.png',
-            '/src/images/Mamberamo/ptt.jpg',
-            '/src/images/Mamberamo/mountain3towerinstallation.jpeg',
-            '/src/images/Mamberamo/Burmeso2.png',
-            '/src/images/Mamberamo/mountain2towerinstallation.jpeg',
-            '/src/images/Mamberamo/ptt-tower-burmeso1.jpg',
-            '/src/images/Mamberamo/ptt-tower-burmeso2.jpg',
-            '/src/images/Mamberamo/mountain1towerinstallationShelter.jpg',
-            '/src/images/Mamberamo/mountain4towerinstallation.jpg',
-            '/src/images/Mamberamo/mountain5towerinstallation.jpg',
-            '/src/images/Mamberamo/mountain6towerinstallation.jpg'            
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/jyp-sarmi-mamberamo_optimized.mp4`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/mi.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/Sarmi-Burmeso.png`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/ptt.jpg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/mountain3towerinstallation.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/Burmeso2.png`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/mountain2towerinstallation.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/ptt-tower-burmeso1.jpg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/ptt-tower-burmeso2.jpg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/mountain1towerinstallationShelter.jpg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/mountain4towerinstallation.jpg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/mountain5towerinstallation.jpg`,
+            `${import.meta.env.BASE_URL}src/images/Mamberamo/mountain6towerinstallation.jpg`            
+        ]
+    },
+    {
+        shortLabel: 'PON PAPUA 2020 CCTV Surveillance',
+        title: 'CCTV Surveillance System',
+        techStack: 'Tech: CCTV Cameras, Video Surveillance, Network Security, PONPAPUA2020, L2TP, MikroTik',
+        longDescription: [
+            'Designed and installed comprehensive CCTV surveillance systems',
+            'Integrated network cameras and video management software',
+            'Implemented secure storage solutions and real-time surveillance capabilities',
+            'Configured video analytics and remote monitoring systems',
+            'Enhanced security and incident prevention through advanced monitoring'
+        ],
+        images: [
+            `${import.meta.env.BASE_URL}src/images/cctv-project/cctvss_optimized.mp4`,            
+            `${import.meta.env.BASE_URL}src/images/cctv-project/networkdiagram.jpg`
         ]
     },
     {
@@ -73,21 +89,21 @@ const projectsData: Project[] = [
             'Ensured continuous operation in harsh environmental conditions'
         ],
         images: [
-            '/src/images/YongsuProject/yongsu.png',
-            '/src/images/YongsuProject/yongsu2.png',
-            '/src/images/YongsuProject/yongsucliff.png',
-            '/src/images/YongsuProject/yongsucliff2.png',
-            '/src/images/YongsuProject/heli1.png',
-            '/src/images/YongsuProject/heli2.png',
-            '/src/images/YongsuProject/heli3.png',
-            '/src/images/YongsuProject/heli4.png',
-            '/src/images/YongsuProject/heli5.png',
-            '/src/images/YongsuProject/heli6.png',
-            '/src/images/YongsuProject/heli7.png',
-            '/src/images/YongsuProject/heli8.png',
-            '/src/images/YongsuProject/heli9.png',
-            '/src/images/YongsuProject/heli10.png',
-            '/src/images/YongsuProject/dormena.png'
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/yongsu.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/yongsu2.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/yongsucliff.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/yongsucliff2.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli1.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli2.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli3.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli4.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli5.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli6.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli7.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli8.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli9.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/heli10.png`,
+            `${import.meta.env.BASE_URL}src/images/YongsuProject/dormena.png`
         ]
     },
     {
@@ -102,14 +118,14 @@ const projectsData: Project[] = [
             'Ensured stable connectivity for business operations'
         ],
         images: [
-            '/src/images/TVRI/1.jpeg',
-            '/src/images/TVRI/2.jpeg',
-            '/src/images/TVRI/3.jpeg',
-            '/src/images/TVRI/4.jpeg',
-            '/src/images/TVRI/5.jpeg',
-            '/src/images/TVRI/6.jpeg',
-            '/src/images/TVRI/7.jpeg',
-            '/src/images/TVRI/mi6.jpeg'
+            `${import.meta.env.BASE_URL}src/images/TVRI/1.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/TVRI/2.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/TVRI/3.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/TVRI/4.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/TVRI/5.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/TVRI/6.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/TVRI/7.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/TVRI/mi6.jpeg`
         ]
     },
     {
@@ -123,8 +139,48 @@ const projectsData: Project[] = [
             'Provided installation, maintenance, and troubleshooting services for banking machines'
         ],
         images: [
-            '/src/images/IBM/50thfloorIBM.jpg',
-            '/src/images/IBM/lobbyIBM.jpg'
+            `${import.meta.env.BASE_URL}src/images/IBM/50thfloorIBM.jpg`,
+            `${import.meta.env.BASE_URL}src/images/IBM/lobbyIBM.jpg`
+        ]
+    },
+
+    {
+        shortLabel: 'Pajak Bumi & Bangunan Kabupaten Jayapura',
+        title: 'PBB Tax System Development',
+        techStack: 'Tech: Oracle, SQL, Win Server 2008, Active Directory, DNS, Tax System',
+        longDescription: [
+            'Provided Oracle 11g database administration for government tax system project',
+            'Performed troubleshooting, user access management, and backup operations',
+            'Configured Windows Server 2008 with Active Directory and DNS services',
+            'Ensured data integrity and system reliability for critical government operations',
+            'Maintained 24/7 system availability for tax processing functions'
+        ],
+        images: [
+            `${import.meta.env.BASE_URL}src/images/ProjectPBBkabJYp/pbbkabjyp1.jpg`,
+            `${import.meta.env.BASE_URL}src/images/ProjectPBBkabJYp/pbbkabjyp2.jpg`,
+            `${import.meta.env.BASE_URL}src/images/ProjectPBBkabJYp/pbbkabjyp3.jpg`,
+            `${import.meta.env.BASE_URL}src/images/ProjectPBBkabJYp/pbbkabjyp4.jpg`,
+            `${import.meta.env.BASE_URL}src/images/ProjectPBBkabJYp/pbbkabjyp5.jpg`
+        ]
+    },
+    {
+        shortLabel: 'Wireless Installations',
+        title: 'Wireless Network Installations',
+        techStack: 'Tech: MikroTik RouterOS, Ubiquiti, WiFi Analysis, Point-to-Point, Point-to-Multipoint',
+        longDescription: [
+            'Deployed multiple wireless network projects including P2P, PTMP links and WiFi installations',
+            'Utilized MikroTik routers and Ubiquiti equipment for reliable connectivity',
+            'Conducted comprehensive site surveys and signal analysis for optimal coverage',
+            'Optimized network configurations for maximum performance and reliability',
+            'Implemented solutions across various challenging environments and terrains'
+        ],
+        images: [
+            `${import.meta.env.BASE_URL}src/images/WIFI-Installations/wifi-analyzer.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/WIFI-Installations/wifi-dish.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/WIFI-Installations/wifi-dish2.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/WIFI-Installations/wifi-dish3.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/WIFI-Installations/site1.jpeg`,
+            `${import.meta.env.BASE_URL}src/images/WIFI-Installations/router-mikrotik.jpeg`
         ]
     },
     {
@@ -139,62 +195,7 @@ const projectsData: Project[] = [
             'Delivered reliable communication systems for enhanced guest experience'
         ],
         images: [
-            '/src/images/HotelAstonJYP/astonHotel.jpg'
-        ]
-    },
-    {
-        shortLabel: 'Pajak Bumi & Bangunan Kabupaten Jayapura',
-        title: 'PBB Tax System Development',
-        techStack: 'Tech: Oracle, SQL, Win Server 2008, Active Directory, DNS, Tax System',
-        longDescription: [
-            'Provided Oracle 11g database administration for government tax system project',
-            'Performed troubleshooting, user access management, and backup operations',
-            'Configured Windows Server 2008 with Active Directory and DNS services',
-            'Ensured data integrity and system reliability for critical government operations',
-            'Maintained 24/7 system availability for tax processing functions'
-        ],
-        images: [
-            '/src/images/ProjectPBBkabJYp/pbbkabjyp1.jpg',
-            '/src/images/ProjectPBBkabJYp/pbbkabjyp2.jpg',
-            '/src/images/ProjectPBBkabJYp/pbbkabjyp3.jpg',
-            '/src/images/ProjectPBBkabJYp/pbbkabjyp4.jpg',
-            '/src/images/ProjectPBBkabJYp/pbbkabjyp5.jpg'
-        ]
-    },
-    {
-        shortLabel: 'PON PAPUA 2020 CCTV Surveillance',
-        title: 'CCTV Surveillance System',
-        techStack: 'Tech: CCTV Cameras, Video Surveillance, Network Security, PONPAPUA2020, L2TP, MikroTik',
-        longDescription: [
-            'Designed and installed comprehensive CCTV surveillance systems',
-            'Integrated network cameras and video management software',
-            'Implemented secure storage solutions and real-time surveillance capabilities',
-            'Configured video analytics and remote monitoring systems',
-            'Enhanced security and incident prevention through advanced monitoring'
-        ],
-        images: [
-            '/src/images/cctv-project/cctvss.mp4',            
-            '/src/images/cctv-project/networkdiagram.jpg'
-        ]
-    },
-    {
-        shortLabel: 'Wireless Installations',
-        title: 'Wireless Network Installations',
-        techStack: 'Tech: MikroTik, Ubiquiti, WiFi Analysis, Point-to-Point, Point-to-Multipoint',
-        longDescription: [
-            'Deployed multiple wireless network projects including P2P, PTMP links and WiFi installations',
-            'Utilized MikroTik routers and Ubiquiti equipment for reliable connectivity',
-            'Conducted comprehensive site surveys and signal analysis for optimal coverage',
-            'Optimized network configurations for maximum performance and reliability',
-            'Implemented solutions across various challenging environments and terrains'
-        ],
-        images: [
-            '/src/images/WIFI-Installations/wifi-analyzer.jpeg',
-            '/src/images/WIFI-Installations/wifi-dish.jpeg',
-            '/src/images/WIFI-Installations/wifi-dish2.jpeg',
-            '/src/images/WIFI-Installations/wifi-dish3.jpeg',
-            '/src/images/WIFI-Installations/site1.jpeg',
-            '/src/images/WIFI-Installations/router-mikrotik.jpeg'
+            `${import.meta.env.BASE_URL}src/images/HotelAstonJYP/astonHotel.jpg`
         ]
     },
 ];
@@ -203,10 +204,30 @@ const projectsData: Project[] = [
 const Projects: React.FC = () => {
     const [selectedTab, setSelectedTab] = useState(0);
     const [[page, direction], setPage] = useState([0, 0]);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const handleTabChange = (index: number) => {
         setSelectedTab(index);
         setPage([0, 0]); // Reset image index and direction when changing projects
+
+        // Scroll the selected card into view in the horizontal list
+        if (scrollContainerRef.current) {
+            const selectedCard = scrollContainerRef.current.children[index] as HTMLElement;
+            if (selectedCard) {
+                const container = scrollContainerRef.current;
+                const containerWidth = container.clientWidth;
+                const cardWidth = selectedCard.offsetWidth;
+                const cardLeft = selectedCard.offsetLeft;
+
+                // Calculate the position to center the card in the container
+                const targetScrollLeft = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+
+                container.scrollTo({
+                    left: Math.max(0, targetScrollLeft),
+                    behavior: 'smooth'
+                });
+            }
+        }
     };
 
     const project = projectsData[selectedTab];
@@ -215,14 +236,14 @@ const Projects: React.FC = () => {
 
     const isVideo = (src: string) => /\.(mp4|webm|ogg)$/i.test(src);
 
-    // Auto-slide state
+ 
     const [isAutoSliding, setIsAutoSliding] = useState(true);
 
-    // Lightbox (full-image) state
+    
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
-    // Auto-slide effect for thumbnail gallery
+    
     useEffect(() => {
         if (!isAutoSliding || images.length <= 1 || lightboxOpen) return;
 
@@ -236,7 +257,7 @@ const Projects: React.FC = () => {
         return () => clearTimeout(timeout);
     }, [isAutoSliding, images.length, imageIndex, lightboxOpen]);
 
-    // Pause auto-slide when user hovers over the gallery
+   
     const handleMouseEnter = () => setIsAutoSliding(false);
     const handleMouseLeave = () => setIsAutoSliding(true);
 
@@ -250,7 +271,7 @@ const Projects: React.FC = () => {
     const lightboxPrev = () => setLightboxIndex((idx) => (idx - 1 + images.length) % images.length);
     const lightboxNext = () => setLightboxIndex((idx) => (idx + 1) % images.length);
 
-    // Prevent body scroll when lightbox is open and add keyboard navigation
+    
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => {
             if (!lightboxOpen) return;
@@ -269,7 +290,7 @@ const Projects: React.FC = () => {
         };
     }, [lightboxOpen, images.length]);
 
-    // Touch swipe handling for lightbox (mobile)
+    
     const touchStartXRef = useRef<number | null>(null);
     const touchStartTimeRef = useRef<number | null>(null);
 
@@ -278,7 +299,7 @@ const Projects: React.FC = () => {
         touchStartTimeRef.current = Date.now();
     };
 
-    // Track current lightbox image orientation to tweak sizing for portrait images
+    
     const [lightboxIsPortrait, setLightboxIsPortrait] = useState(false);
     const onLightboxImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
         const img = e.currentTarget;
@@ -292,8 +313,7 @@ const Projects: React.FC = () => {
         const endX = e.changedTouches[0].clientX;
         const dx = endX - startX;
         const dt = Date.now() - startTime;
-        const absDx = Math.abs(dx);
-        // Simple thresholds: horizontal swipe > 40px and reasonably quick
+        const absDx = Math.abs(dx);        
         if (absDx > 40 && dt < 1000) {
             if (dx > 0) lightboxPrev();
             else lightboxNext();
@@ -345,8 +365,7 @@ const Projects: React.FC = () => {
         <section className="py-16 lg:py-20 relative">
             <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-[30px]">
                 <div className="text-center mb-12">
-                    <h2 className="section-title">Network & Infrastructure Projects</h2>
-                    <p className="text-[#64748b] text-lg md:text-xl font-light tracking-[1px]">Demonstrated Expertise Through Key Projects</p>
+                    <h2 className="section-title">Network & Infrastructure Projects</h2>                    
                 </div>
 
                  {/* Mobile Project Navigation */}
@@ -366,7 +385,11 @@ const Projects: React.FC = () => {
 
                     {/* Horizontal Scrollable Project Cards */}
                     <div className="relative">
-                        <div className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar" style={{ scrollSnapType: 'x mandatory' }}>
+                        <div
+                            ref={scrollContainerRef}
+                            className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar"
+                            style={{ scrollSnapType: 'x mandatory' }}
+                        >
                             {projectsData.map((project, index) => (
                                 <div
                                     key={index}
@@ -503,6 +526,7 @@ const Projects: React.FC = () => {
                                                         muted
                                                         loop
                                                         playsInline
+                                                        preload="none"
                                                         onClick={() => openLightbox(imageIndex)}
                                                     />
                                                 ) : (
@@ -515,9 +539,7 @@ const Projects: React.FC = () => {
                                                     />
                                                 )}
 
-                                                {/* caption overlay removed per user request */}
-
-                                                {/* (removed overlay that blocked clicks so images are clickable) */}
+                                            
                                             </motion.div>
                                         </AnimatePresence>
                                         
@@ -614,6 +636,7 @@ const Projects: React.FC = () => {
                                             muted
                                             loop
                                             playsInline
+                                            preload="none"
                                             controls={false}
                                         />
                                     ) : (

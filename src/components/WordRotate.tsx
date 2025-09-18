@@ -12,13 +12,10 @@ interface WordRotateProps {
 
 const defaultFramerProps = {
     variants: {
-        initial: { opacity: 0, y: 20, rotateX: -90, filter: "blur(5px)" },
-        animate: { opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)" },
-        exit: { opacity: 0, y: -20, rotateX: 90, filter: "blur(5px)" },
+        initial: { opacity: 0, y: 20, rotateX: -90 },
+        animate: { opacity: 1, y: 0, rotateX: 0 },
+        exit: { opacity: 0, y: -20, rotateX: 90 },
     },
-    // FIX: Cast `type: "spring"` to a const to fix a TypeScript type error.
-    // Framer Motion's `transition.type` property expects a specific string literal (e.g., "spring", "tween"),
-    // but TypeScript infers it as a generic `string` by default. `as const` ensures the correct literal type.
     transition: { type: "spring" as const, stiffness: 200, damping: 20 },
 };
 
@@ -35,7 +32,6 @@ export function WordRotate({
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, duration);
 
-    // Clean up interval on unmount
     return () => clearInterval(interval);
   }, [words, duration]);
 

@@ -40,6 +40,9 @@ export default defineConfig(({ mode }) => {
                           png: {
                               quality: 80,
                           },
+                          webp: {
+                              quality: 80,
+                          },
                       }),
                   ]
                 : []),

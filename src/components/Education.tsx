@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface EducationItem {
@@ -23,13 +23,36 @@ const educationData: EducationItem[] = [
 
 const Education: React.FC = () => {
     const [selectedTab, setSelectedTab] = useState(0);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    const handleTabChange = (index: number) => {
+        setSelectedTab(index);
+
+        // Scroll the selected card into view in the horizontal list
+        if (scrollContainerRef.current) {
+            const selectedCard = scrollContainerRef.current.children[index] as HTMLElement;
+            if (selectedCard) {
+                const container = scrollContainerRef.current;
+                const containerWidth = container.clientWidth;
+                const cardWidth = selectedCard.offsetWidth;
+                const cardLeft = selectedCard.offsetLeft;
+
+                // Calculate the position to center the card in the container
+                const targetScrollLeft = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+
+                container.scrollTo({
+                    left: Math.max(0, targetScrollLeft),
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
 
     return (
         <section className="py-16 lg:py-20 relative">
             <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-[30px]">
                 <div className="text-center mb-12">
-                    <h2 className="section-title">Education &amp; Certifications</h2>
-                    <p className="text-[#64748b] text-lg md:text-xl font-light tracking-[1px]">Continuous learning and professional development</p>
+                    <h2 className="section-title">Education &amp; Certifications</h2>                   
                 </div>
 
                 {/* Mobile Education Navigation */}
@@ -49,7 +72,11 @@ const Education: React.FC = () => {
 
                     {/* Horizontal Scrollable Education Cards */}
                     <div className="relative">
-                        <div className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar" style={{ scrollSnapType: 'x mandatory' }}>
+                        <div
+                            ref={scrollContainerRef}
+                            className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar"
+                            style={{ scrollSnapType: 'x mandatory' }}
+                        >
                             {educationData.map((education, index) => (
                                 <div
                                     key={index}
@@ -58,7 +85,7 @@ const Education: React.FC = () => {
                                             ? 'border-[#00d9ff] bg-gradient-to-br from-[#00d9ff]/10 to-[#8b5cf6]/10 shadow-lg shadow-[#00d9ff]/20'
                                             : 'border-white/20 bg-white/5 hover:border-white/40 hover:bg-white/10'
                                     }`}
-                                    onClick={() => setSelectedTab(index)}
+                                    onClick={() => handleTabChange(index)}
                                     style={{ scrollSnapAlign: 'start' }}
                                 >
                                     <div className="p-4">
@@ -84,7 +111,7 @@ const Education: React.FC = () => {
                         
                         {/* Navigation Arrows */}
                         <button
-                            onClick={() => setSelectedTab(Math.max(0, selectedTab - 1))}
+                            onClick={() => handleTabChange(Math.max(0, selectedTab - 1))}
                             disabled={selectedTab === 0}
                             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 w-8 h-8 bg-[#0a0f1c] border border-white/20 rounded-full flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/10 transition-all duration-200"
                         >
@@ -92,9 +119,9 @@ const Education: React.FC = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                             </svg>
                         </button>
-                        
+
                         <button
-                            onClick={() => setSelectedTab(Math.min(educationData.length - 1, selectedTab + 1))}
+                            onClick={() => handleTabChange(Math.min(educationData.length - 1, selectedTab + 1))}
                             disabled={selectedTab === educationData.length - 1}
                             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 w-8 h-8 bg-[#0a0f1c] border border-white/20 rounded-full flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/10 transition-all duration-200"
                         >
@@ -109,10 +136,10 @@ const Education: React.FC = () => {
                         {educationData.map((_, index) => (
                             <button
                                 key={index}
-                                onClick={() => setSelectedTab(index)}
+                                onClick={() => handleTabChange(index)}
                                 className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                                    selectedTab === index 
-                                        ? 'bg-[#00d9ff] w-6' 
+                                    selectedTab === index
+                                        ? 'bg-[#00d9ff] w-6'
                                         : 'bg-white/30 hover:bg-white/50'
                                 }`}
                             />

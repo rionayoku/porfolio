@@ -2,7 +2,7 @@ import React from 'react';
 
 const contactInfo = [
     { icon: 'fa-envelope', title: 'Email', detail: 'riona.yoku@gmail.com' },
-    { icon: 'fa-phone', title: 'Phone', detail: '+62 851 6130 2281' },
+    { icon: 'fa-phone', title: 'Phone/WhatsApp', detail: '+62 851 6130 2281', link: 'https://wa.me/6285161302281' },
     { icon: 'fa-map-marker-alt', title: 'Location', detail: 'Jayapura, Papua' },
 ];
 
@@ -11,8 +11,7 @@ const Contact: React.FC = () => {
         <section className="py-16 lg:py-20 relative">
             <div className="max-w-[1400px] mx-auto px-6 sm:px-8 md:px-[30px]">
                 <div className="text-center mb-12">
-                    <h2 className="section-title">Contact Information</h2>
-                    <p className="text-[#64748b] text-lg md:text-xl font-light tracking-[1px]">Feel free to reach out through any of these channels</p>
+                    <h2 className="section-title">Contact Information</h2>                    
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20">
                     {contactInfo.map((item, index) => (
@@ -22,7 +21,13 @@ const Contact: React.FC = () => {
                             </div>
                             <div className="text-center">
                                 <h3 className="font-['Poppins'] text-xl mb-4 text-[#e0e6ed] uppercase tracking-[1px]">{item.title}</h3>
-                                <p className="text-[#64748b] text-xl">{item.detail}</p>
+                                {item.link ? (
+                                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-[#64748b] text-xl hover:text-cyan-400 transition-colors">
+                                        {item.detail}
+                                    </a>
+                                ) : (
+                                    <p className="text-[#64748b] text-xl">{item.detail}</p>
+                                )}
                             </div>
                         </div>
                     ))}
